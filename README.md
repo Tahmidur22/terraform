@@ -3,9 +3,9 @@
 # Commands:
 
 # create environment variables to initialise a shared back end (azure storage account)
-$env:RESOURCE_GROUP_NAME = 'jonnychipz-state'
-$env:STORAGE_ACCOUNT_NAME = 'jonnychipztfstate'
-$env:CONTAINER_NAME = 'tstate'
+$env:RESOURCE_GROUP_NAME = 'tchow-state'
+$env:STORAGE_ACCOUNT_NAME = 'tchowtfstate'
+$env:CONTAINER_NAME = 'tchowtstate'
 
 # Create resource group
 az group create --name $env:RESOURCE_GROUP_NAME --location uksouth
