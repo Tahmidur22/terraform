@@ -5,6 +5,12 @@ terraform {
         version = "=2.52.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name = "tchow-state"
+    storage_account_name = "tchowtfstate"
+    container_name = "tchowtstate"
+    key = "terraform.state"
+  }
 }
 
 # Configure the Microsoft Azure Provider 
@@ -15,7 +21,7 @@ provider "azurerm" {
 # Create a resource group 
 resource "azurerm_resource_group" "examplerg" {
     name = "example_rg"
-    location = "UK South"
+    location = var.primary_location
 }
 
 # Create a virtual network within the resource group
